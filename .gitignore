@@ -1,5 +1,6 @@
 **/devel/
 **/logs/
+**/log/
 **/build/
 **/bin/
 **/install
@@ -48,5 +49,5 @@
 # Emacs
 **/.#*
 
-# Catkin custom files
-**/CATKIN_IGNORE
+# Colcon custom files
+**/COLCON_IGNORE

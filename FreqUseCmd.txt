@@ -54,5 +54,9 @@ ros2 bag record <topic_1_name>... <topic_n_name> # record content of topics
 
 ros2 bag info <bag_file_name> # print info within bag file
 ros2 bag play <bag_file_name> # re-publish recorded contents to respective topics
+
 colcon build # build pkg (run this cmd in ws root dir)
+--symlink-install: allows the installed files to be changed by changing the files in the source space (e.g. Python files or other not compiled resourced) for faster iteration
+
 rosdep install -i --from-path <src> --rosdistro <ros_dist> -y # check installed dep needed for building <src>
+

@@ -16,7 +16,7 @@
 * Launch file is now written in python3 - sample [here](./turtlesim_launch/turtlesim_mimic_launch.py)
 * `--ros-args --remap <from>:=<to>` - using this to reassign default node properties when running new node
 * `catkin_make` is replaced by `colcon build`
-## Build pkg
+## Build pkg - see [here](https://docs.ros.org/en/foxy/Tutorials/Colcon-Tutorial.html#basics) for more details
 1. Create workspace
 ``` bash
 mkdir <colcon_ws>
@@ -36,9 +36,18 @@ rosdep install -i --from-path <src> --rosdistro <ros_dist> -y
 ```
 6. Build pkg
 ``` bash
-colcon build
+colcon build --symlink-install
 ```
-7. New dir is created (*build/install/log*)
+7. New dir is created `build`, `install` & `log` dir -> source overlay to add pkg to current active env
+``` bash
+# if ros2 underlay has been sourced, then use 'local_setup.bash' file
+. install/local_setup.bash
+
+# if ros2 underlay has NOT been sourced, then use 'setup.bash' file (same as sourcing 2 files above)
+. install/setup.bash
+```
+> _**NOTE:**_ Pkgs of 'overlay' whose name is the same as existing pkgs in ros2 'underlay' will override pkgs in 'underlay'
+
 # Architecture
 ## Node
 * ROS comprised of nodes
