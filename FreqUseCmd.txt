@@ -1,0 +1,54 @@
+ros2 run <package_name> <executable_name> # launches an executable from a package
+ros2 node list # view list of nodes
+
+# reassign default node properties (node name, topic names, service names, etc.)
+ros2 run <package_name> <executable_name> --ros-args --remap __node:=<new node name>
+
+ros2 node info <node_name> # view node info
+
+ros2 topic list # view list of topics
+-t: show type of topics
+
+rqt_graph # show ros graph
+rqt # GUI tool to view & manipulate any running instances (view types/graph, publish msg...)
+
+ros2 topic echo <topic_name> # print content of that topic
+ros2 topic info <topic_name> # view topic info (msg type, subscribers, publishers...)
+ros2 interface show <msg_type> # view structure of msg type
+
+ros2 topic pub <topic_name> <msg_type> '<args>' # publish msg to a topic
+<args>: using YAML format (Ex: {linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}})
+--once: publish once then exist
+--rate <#>: publish msg at <#>Hz
+
+ros2 topic hz <topic_name> # show publishing rate of msg received at that topic
+
+ros2 service type <service_name> # view type of service
+ros2 service list # view list of services
+-t: show type of service
+
+ros2 service find <service_type> # find services using their type
+
+# view structure of service type
+ros2 interface show <service_type>.srv
+or
+ros2 interface show <service_type>
+
+# call a service
+ros2 service call <service_name> <service_type> "<args>"
+<args>: using YAML format
+
+ros2 param list # view list of params
+ros2 param get <node_name> <parameter_name> # view type of param
+ros2 param set <node_name> <parameter_name> <value> # set value to param
+ros2 param dump <node_name> # dump value of all params of node to file
+ros2 param load <node_name> <parameter_file> # load params from file
+
+# load parameter file on node startup
+ros2 run <package_name> <executable_name> --ros-args --params-file <file_name>
+
+ros2 action list # view list of actions
+-t: show type of action
+
+ros2 action info <action_name> # view detail info of action
+ros2 interface show <action_type>
