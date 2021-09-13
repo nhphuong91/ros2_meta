@@ -1,2 +1,3 @@
 gnupg2
 ros-foxy-desktop
+python3-colcon-common-extensions

@@ -1,14 +1,44 @@
-# Important notes for ROS2
+# Keynotes for ROS2
+* Refer to [here](./FreqUseCmd.txt) for cli of ros2
 * ROS2 uses term `Workspace` to indicate your devel location - [link](https://docs.ros.org/en/foxy/Tutorials/Configuring-ROS2-Environment.html#background)
 * No more 'roscd' - [Why?](https://answers.ros.org/question/277801/ros2-roscd-feature/)
-> **_NOTE:_** If needed, refer to [colcon_cd](https://github.com/colcon/colcon-cd)
+    * **_NOTE:_** If needed, refer to [colcon_cd](https://github.com/colcon/colcon-cd)
 * ROS2 use [DDS](http://en.wikipedia.org/wiki/Data_Distribution_Service)
 * Replace `ROS_HOSTNAME/ROS_MASTER_URI` with `ROS_DOMAIN_ID` (0-101 and 215-232) - [see more](https://docs.ros.org/en/foxy/Concepts/About-Domain-ID.html)
-> **_NOTE 1:_** Running more than 120 ROS2 processes on one computer may spill over into other domain IDs or the ephemeral ports
+    * **_NOTE 1:_** Running more than 120 ROS2 processes on one computer may spill over into other domain IDs or the ephemeral ports
 
-> **_NOTE 2:_** Maximum number of processes that should be created when using domain ID 101 on Linux is 54
+    * **_NOTE 2:_** Maximum number of processes that should be created when using domain ID 101 on Linux is 54
 
 * Message type is structured as `<pkg>/<type (msg/srv/act)>/<name>` - see [sample here](https://docs.ros2.org/foxy/api/test_msgs/index-msg.html)
+* `rqt_console` - GUI tool to introspect logs
+    * Use `--ros-args --log-level <level>` to filter logs of `ros2 run`
+    * `<level>`: could be one of `Fatal/Error/Warn/Info/Debug`
+* Launch file is now written in python3 - sample [here](./turtlesim_launch/turtlesim_mimic_launch.py)
+* `--ros-args --remap <from>:=<to>` - using this to reassign default node properties when running new node
+* `catkin_make` is replaced by `colcon build`
+## Build pkg
+1. Create workspace
+``` bash
+mkdir <colcon_ws>
+```
+2. Create source
+``` bash
+mkdir -p <colcon_ws>/src
+```
+3. Put your source code in `<colcon_ws>/src`
+4. Navigate to *colcon_ws* root dir
+``` bash
+cd <colcon_ws>
+```
+5. Check dependencies
+``` bash
+rosdep install -i --from-path <src> --rosdistro <ros_dist> -y
+```
+6. Build pkg
+``` bash
+colcon build
+```
+7. New dir is created (*build/install/log*)
 # Architecture
 ## Node
 * ROS comprised of nodes
@@ -26,3 +56,8 @@
 ### Action
 * Mix of Pub-Sub & Ser-Cli
 ![Action message](./images/Action-SingleActionClient.gif)
+
+# References
+Documentation: https://docs.ros.org/en/foxy/
+API: https://docs.ros2.org/foxy/api/
+Tutorial repo: https://github.com/ros/ros_tutorials/tree/foxy-devel
