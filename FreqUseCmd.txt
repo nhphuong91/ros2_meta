@@ -57,6 +57,7 @@ ros2 bag play <bag_file_name> # re-publish recorded contents to respective topic
 
 colcon build # build pkg (run this cmd in ws root dir)
 --symlink-install: allows the installed files to be changed by changing the files in the source space (e.g. Python files or other not compiled resourced) for faster iteration
+--packages-select <pkg_name>: indicate which pkg to build
 
 rosdep install -i --from-path <src> --rosdistro <ros_dist> -y # check installed dep needed for building <src>
 

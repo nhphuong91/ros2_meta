@@ -16,6 +16,8 @@
 * Launch file is now written in python3 - sample [here](./turtlesim_launch/turtlesim_mimic_launch.py)
 * `--ros-args --remap <from>:=<to>` - using this to reassign default node properties when running new node
 * `catkin_make` is replaced by `colcon build`
+* Add place an empty file named `COLCON_IGNORE` in the pkg dir to ignore building it
+ 
 ## Build pkg - see [here](https://docs.ros.org/en/foxy/Tutorials/Colcon-Tutorial.html#basics) for more details
 1. Create workspace
 ``` bash
@@ -47,6 +49,7 @@ colcon build --symlink-install
 . install/setup.bash
 ```
 > _**NOTE:**_ Pkgs of 'overlay' whose name is the same as existing pkgs in ros2 'underlay' will override pkgs in 'underlay'
+8. Done. Now new pkg can be used as usual: `ros2 run <new_pkg> <<exec_name>>`
 
 # Architecture
 ## Node

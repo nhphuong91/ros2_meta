@@ -2,3 +2,13 @@ gnupg2
 ros-foxy-desktop
 python3-colcon-common-extensions
 python3-rosdep2
+
+# turtlebot3
+ros-foxy-gazebo-*
+ros-foxy-cartographer
+ros-foxy-cartographer-ros
+ros-foxy-navigation2
+ros-foxy-nav2-bringup
+ros-foxy-dynamixel-sdk
+ros-foxy-turtlebot3-msgs
+ros-foxy-turtlebot3
