@@ -5,7 +5,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6
 
 RUN apt update && \
     apt upgrade -y && \
-    apt install -y python3-rosdep2 \
+    apt install -y \
         ros-foxy-gazebo-* \
         ros-foxy-cartographer \
         ros-foxy-cartographer-ros \
