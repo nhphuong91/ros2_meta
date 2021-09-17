@@ -1,4 +1,4 @@
-image: /home/nhphuong/projects/ros2_meta/turtlebot3_ws/map.pgm
+image: /home/nhphuong/projects/ros2_meta/turtlebot3_ws/maps/map.pgm
 mode: trinary
 resolution: 0.05
 origin: [-1.27, -2.42, 0]
