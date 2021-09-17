@@ -10,6 +10,7 @@ ros2 launch turtlebot3_gazebo empty_world.launch.py
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py
 ```
+> **__NOTE:__** It may take a while for gazebo to download map components
 6. Manual control
 ``` bash
 ros2 run turtlebot3_teleop teleop_keyboard
@@ -30,11 +31,13 @@ ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
 ``` bash
 ros2 run nav2_map_server map_saver_cli -f ~/map
 ```
+> **__NOTE:__** If there is an error, add `--ros-args -p save_map_timeout:=10000`
 11. Load map
 ``` bash
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=$HOME/map.yaml
 ```
 12. Navigation 2 - read [more](https://navigation.ros.org/)
+> **__NOTE:__** If loaded doesn't show tf of map origin, then init current pose may fail => reload map until it works
 13. Use fake node in stead of simulation
 ``` bash
 ros2 launch turtlebot3_fake_node turtlebot3_fake_node.launch.py
