@@ -9,8 +9,8 @@ For running it, follow through below steps:
 ```bash
 rocker --nvidia --x11 --volume <PATH>/<TO>/ros2_meta -- nhphuong91/ros2_turtlebot:0.1
 ```
-> **__NOTE 1:__** For intel IGP, follow this section: https://github.com/osrf/rocker/#intel-integrated-graphics-support
+> **_NOTE 1:_** For intel IGP, follow this section: https://github.com/osrf/rocker/#intel-integrated-graphics-support
 
-> **__NOTE 2:__** See here for further info: https://github.com/osrf/rocker/#volume-mount
+> **_NOTE 2:_** See here for further info: https://github.com/osrf/rocker/#volume-mount
 
-> **__NOTE 3:__** Mount `.bashrc` file to container & replace defaults `.bashrc` file for using convenient shortkeys
+> **_NOTE 3:_** Mount `.bashrc` file to container & replace defaults `.bashrc` file for using convenient shortkeys

@@ -9,6 +9,7 @@
 
     * **_NOTE 2:_** Maximum number of processes that should be created when using domain ID 101 on Linux is 54
 
+    * **_NOTE 3:_** Setup host computer & remote robot to use the same `ROS_DOMAIN_ID`
 * Message type is structured as `<pkg>/<type (msg/srv/act)>/<name>` - see [sample here](https://docs.ros2.org/foxy/api/test_msgs/index-msg.html)
 * `rqt_console` - GUI tool to introspect logs
     * Use `--ros-args --log-level <level>` to filter logs of `ros2 run`
@@ -43,10 +44,10 @@ colcon build --symlink-install
 7. New dir is created `build`, `install` & `log` dir -> source overlay to add pkg to current active env
 ``` bash
 # if ros2 underlay has been sourced, then use 'local_setup.bash' file
-. install/local_setup.bash
+. install/local_setup.sh
 
 # if ros2 underlay has NOT been sourced, then use 'setup.bash' file (same as sourcing 2 files above)
-. install/setup.bash
+. install/setup.sh
 ```
 > _**NOTE:**_ Pkgs of 'overlay' whose name is the same as existing pkgs in ros2 'underlay' will override pkgs in 'underlay'
 8. Done. Now new pkg can be used as usual: `ros2 run <new_pkg> <<exec_name>>`
