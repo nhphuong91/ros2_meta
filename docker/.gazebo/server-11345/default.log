@@ -1,0 +1,29 @@
+Gazebo multi-robot simulator, version 11.5.1
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1631937718 265280796) [Msg] Waiting for master.
+(1631937718 271150594) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1631937718 271196317) [Msg] Publicized address: 192.168.1.2
+(1631937719 475052217) [Msg] Loading world file [/home/nhphuong/projects/ros2_meta/turtlebot3_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/worlds/turtlebot3_houses/waffle_pi.model]
+(1631937719 648845740) applying Gaussian noise model with mean 0, stddev 0.0002, bias -0
+(1631937719 648899349) applying Gaussian noise model with mean 0, stddev 0.0002, bias 0
+(1631937719 648951263) applying Gaussian noise model with mean 0, stddev 0.0002, bias -0
+(1631937719 648998916) Applying angular velocity noise to IMU[tb3_imu].
+  X: Gaussian noise, mean[0], stdDev[0.0002] bias[-0] dynamicBiasStdDev[0] dynamicBiasCorrTime[0] precision[0] quantized[0]
+  Y: Gaussian noise, mean[0], stdDev[0.0002] bias[0] dynamicBiasStdDev[0] dynamicBiasCorrTime[0] precision[0] quantized[0]
+  Z: Gaussian noise, mean[0], stdDev[0.0002] bias[-0] dynamicBiasStdDev[0] dynamicBiasCorrTime[0] precision[0] quantized[0]
+(1631937719 649030018) applying Gaussian noise model with mean 0, stddev 0.017, bias 0
+(1631937719 649099726) applying Gaussian noise model with mean 0, stddev 0.017, bias -0
+(1631937719 649128204) applying Gaussian noise model with mean 0, stddev 0.017, bias -0
+(1631937719 649160818) Applying linear acceleration noise to IMU[tb3_imu].
+  X: Gaussian noise, mean[0], stdDev[0.017] bias[0] dynamicBiasStdDev[0] dynamicBiasCorrTime[0] precision[0] quantized[0]
+  Y: Gaussian noise, mean[0], stdDev[0.017] bias[-0] dynamicBiasStdDev[0] dynamicBiasCorrTime[0] precision[0] quantized[0]
+  Z: Gaussian noise, mean[0], stdDev[0.017] bias[-0] dynamicBiasStdDev[0] dynamicBiasCorrTime[0] precision[0] quantized[0]
+(1631937719 812789457) applying Gaussian noise model with mean 0, stddev 0.01, bias -0
+(1631937719 944890743) Init world[default]
+(1631937720 170296853) [Wrn] [Event.cc:61] Warning: Deleting a connection right after creation. Make sure to save the ConnectionPtr from a Connect call
+(1631937720 171676351) applying Gaussian noise model with mean 0, stddev 0.007, bias -0
+(1631937847 597971361) [Wrn] [Publisher.cc:136] Queue limit reached for topic /gazebo/default/pose/local/info, deleting message. This warning is printed only once.

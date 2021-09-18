@@ -13,4 +13,4 @@ rocker --nvidia --x11 --volume <PATH>/<TO>/ros2_meta -- nhphuong91/ros2_turtlebo
 
 > **_NOTE 2:_** See here for further info: https://github.com/osrf/rocker/#volume-mount
 
-> **_NOTE 3:_** Mount `.bashrc` file to container & replace defaults `.bashrc` file for using convenient shortkeys
+4. For convenience, replace defaults [`.bashrc`](./.bashrc) file (shortkeys) & [`.gazebo`](./.gazebo) (model files) within container
