@@ -12,3 +12,22 @@ ros-foxy-nav2-bringup
 ros-foxy-dynamixel-sdk
 ros-foxy-turtlebot3-msgs
 ros-foxy-turtlebot3
+
+# moveit2
+python3-colcon-mixin
+python3-vcstool
+ros-foxy-joint-state-publisher
+ros-foxy-eigen-stl-containers
+libqt5x11extras5-dev
+ros-foxy-moveit-common
+ros-foxy-moveit-core
+ros-foxy-moveit-ros-planning
+ros-foxy-joint-state-publisher-gui
+ros-foxy-gripper-controllers
+ros-foxy-moveit
+ros-foxy-warehouse-ros-mongo
+ros-foxy-moveit-ros-perception
+ros-foxy-moveit-ros-planning-interface
+ros-foxy-moveit-servo
+ros-foxy-geometric-shapes
+ros-foxy-graph-msgs
